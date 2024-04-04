@@ -1,0 +1,100 @@
+/* Root */
+
+:root {
+    --body-bg: #d5e1ef;
+    --card-bg: #fff;
+    --heading-color: #1f314f;
+    --text-color: #7d889e;
+    --qr-bg: #2c7dfa;
+    --qr-round: #3685ff;
+}
+
+
+/* Global */
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 32px 28px;
+    margin: 0;
+    font-family: "Outfit", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: normal;
+    letter-spacing: 0.188px;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* QR Code Styles */
+
+.qr-code-card {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 320px;
+    padding: 16px 16px 40px;
+    margin: auto;
+    border-radius: 20px;
+    background-color: var(--card-bg);
+    text-align: center;
+    box-shadow: 0px 25px 25px 0px rgba(0,0,0,0.05);
+}
+
+.qr-code-card_img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.qr-code-card_heading {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--heading-color);
+    font-size: 22px;
+    line-height: normal;
+}
+
+.qr-code-card_text {
+    padding-left: 16px;
+    padding-right: 16px ;
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+@media only screen and (max-width: 350px) {
+    body {
+        padding: 16px;
+    }
+
+    .qr-code-card_heading {
+        font-size: 20px;
+    }
+
+    .qr-code-card_text {
+        padding: 0;
+    }
+
+    .theme-toggle-button {
+        position: static;
+        align-self: flex-end;
+    }
+}
